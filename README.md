@@ -96,3 +96,9 @@ This project demonstrates a cost-effective and automated disease diagnosis appro
 **Jaswanth Badipati**  
 LinkedIn: https://linkedin.com/in/jaswanthbadipati  
 GitHub: https://github.com/jaswanthbadipati
+
+**Sai Balaji Chimata**  
+LinkedIn: https://www.linkedin.com/in/sai-balaji-chimata-3791b32a5/
+
+**Tarun Utukuri**  
+LinkedIn: [https://linkedin.com/in/tarunutukuri  ](https://www.linkedin.com/in/tarun9905/)
