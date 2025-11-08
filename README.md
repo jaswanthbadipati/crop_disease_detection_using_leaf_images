@@ -1,148 +1,98 @@
-<!-- Improved compatibility of back to top link -->
-<a id="readme-top"></a>
+# Crop Disease Detection Using Leaf Images
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+## 1. Introduction
+Agriculture is a primary sector that significantly contributes to food security and economic development. However, crop diseases adversely affect yield quality and productivity. Traditional disease diagnosis relies on expert observation, which may be time-consuming and prone to errors. With advancements in Artificial Intelligence, particularly Deep Learning, it is now possible to automatically detect plant diseases using leaf images.
 
-<br />
-<div align="center">
-  <a href="#">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+This project proposes a Convolutional Neural Network (CNN) based classification model for diagnosing plant diseases from leaf images. A user-friendly Streamlit web application is integrated to make the system easily accessible to farmers, students, and researchers.
 
-  <h3 align="center">Crop Disease Detection Using Leaf Images</h3>
+## 2. Problem Statement
+- Farmers often fail to detect crop diseases at an early stage.
+- Manual disease identification requires expert knowledge and is not scalable.
+- Delay in diagnosis leads to reduced crop productivity and financial loss.
 
-  <p align="center">
-    A Deep Learning based system to detect plant leaf diseases using CNN and Streamlit.
-    <br />
-    <a href="#about-the-project"><strong>Explore the docs »</strong></a>
-    <br /><br />
-    <a href="#usage">View Demo</a>
-    ·
-    <a href="https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/issues">Request Feature</a>
-  </p>
-</div>
+Therefore, an automated, fast, and reliable plant disease detection system is required.
 
----
+## 3. Objectives
+| Objective | Description |
+|---------|-------------|
+| Disease Identification | To classify leaf images as healthy or diseased. |
+| Deep Learning Model | To train a CNN model using the PlantVillage dataset. |
+| Real-Time Prediction | To develop a web interface for disease detection. |
+| Accessibility | To assist farmers with a simple and affordable solution. |
 
-## Table of Contents
-- [About The Project](#about-the-project)
-- [Dataset](#dataset)
-- [Built With](#built-with)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Results](#results)
-- [Roadmap](#roadmap)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+## 4. Dataset Description
+- Dataset Used: PlantVillage Dataset
+- Source: https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset
+- Total Images: ~54,000
+- Classes: Multiple disease types and healthy leaves
 
----
+### Data Preprocessing
+- Image resizing (224 × 224)
+- Normalization
+- Data Augmentation (rotation, flip, zoom)
+- Train/Validation/Test split
 
-## About The Project
+## 5. Methodology
 
-Crop diseases cause significant agricultural losses. This project uses Convolutional Neural Networks (CNN) to classify leaf images as healthy or diseased. A Streamlit app allows users to upload an image and get disease predictions instantly.
+### System Architecture
+Dataset → Preprocessing → CNN Model Training → Model Evaluation → Streamlit Web App
 
-### Key Features
-- Automated disease detection
-- High accuracy using CNN architecture
-- Streamlit-based user-friendly interface
+### CNN Model Components
+- Convolution Layers (Feature Extraction)
+- Max Pooling Layers (Dimensionality Reduction)
+- Fully Connected Layers (Classification)
+- Softmax Output Layer
 
----
+### Training Parameters
+| Parameter | Value |
+|---------|-------|
+| Optimizer | Adam |
+| Loss Function | Categorical Crossentropy |
+| Batch Size | 32 |
+| Epochs | 25–50 |
 
-## Dataset
-**PlantVillage Dataset**  
-https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset
+## 6. Implementation
 
-- ~54,000 images
-- Multiple disease classes
-
----
-
-## Built With
-
-* Python
-* TensorFlow / Keras
-* NumPy / Pandas
-* Streamlit
-* Matplotlib
-
----
-
-## Getting Started
-
-### Install Requirements
-```bash
+### Requirements Installation
+```
 pip install -r requirements.txt
 ```
 
-### Run the App
-```bash
+### Running the Web Application
+```
 streamlit run app.py
 ```
 
----
+### Usage Instructions
+1. Upload a leaf image through the interface.
+2. The model processes the image.
+3. The predicted disease class and confidence score are displayed.
 
-## Usage
-1. Launch Streamlit
-2. Upload a leaf image
-3. View disease prediction
+## 7. Results & Performance
 
----
-
-## Results
-
-| Metric | Value |
-|-------|-------|
+| Metric | Score |
+|--------|-------|
 | Training Accuracy | ~95-98% |
 | Validation Accuracy | ~90-95% |
 
----
+## 8. Conclusion
+This project demonstrates a cost-effective and automated disease diagnosis approach using deep learning. The system is efficient, user-friendly, and beneficial for early disease detection and prevention of crop loss.
 
-## Roadmap
-- [x] Train CNN Model
-- [x] Build Streamlit UI
-- [ ] Add treatment suggestions
-- [ ] Deploy to Cloud
+## 9. Future Enhancements
+| Proposed Improvement | Benefit |
+|---------------------|---------|
+| Deploy to Cloud | Access from anywhere |
+| Add Disease Treatment Suggestions | Practical farmer guidance |
+| Convert to Mobile App (TFLite) | On-field usage |
+| Expand Dataset | Increase robustness |
 
----
+## 10. References
+1. PlantVillage Dataset, Kaggle
+2. TensorFlow Documentation
+3. Chollet, F. Deep Learning with Python, Manning
+4. Agricultural Disease Analysis Research Studies
 
-## License
-
-Distributed under the MIT License.
-
----
-
-## Contact
-
+## 11. Author
 **Jaswanth Badipati**  
 LinkedIn: https://linkedin.com/in/jaswanthbadipati  
-Project Link: https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images
-
----
-
-## Acknowledgments
-* PlantVillage Dataset
-* TensorFlow Docs
-* Streamlit Docs
-
----
-
-[contributors-shield]: https://img.shields.io/github/contributors/jaswanthbadipati/crop_disease_detection_using_leaf_images.svg?style=for-the-badge
-[contributors-url]: https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jaswanthbadipati/crop_disease_detection_using_leaf_images.svg?style=for-the-badge
-[forks-url]: https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/network/members
-[stars-shield]: https://img.shields.io/github/stars/jaswanthbadipati/crop_disease_detection_using_leaf_images.svg?style=for-the-badge
-[stars-url]: https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jaswanthbadipati/crop_disease_detection_using_leaf_images.svg?style=for-the-badge
-[issues-url]: https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/issues
-[license-shield]: https://img.shields.io/github/license/jaswanthbadipati/crop_disease_detection_using_leaf_images.svg?style=for-the-badge
-[license-url]: https://github.com/jaswanthbadipati/crop_disease_detection_using_leaf_images/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/jaswanthbadipati
+GitHub: https://github.com/jaswanthbadipati
